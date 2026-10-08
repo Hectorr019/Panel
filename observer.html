@@ -1,0 +1,92 @@
+<!-- observer.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Panel de Control</title>
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <div class="container">
+ <div class="header">
+ <h1>Panel de Control</h1>
+ <p>Monitorea dispositivos en tiempo real</p>
+ </div>
+ 
+ <div class="login-section">
+ <div class="login-form">
+ <input type="text" id="username" placeholder="Usuario" class="login-input">
+ <input type="password" id="password" placeholder="Contraseña" class="login-input">
+ <button id="loginButton" class="login-btn">Iniciar Sesión</button>
+ </div>
+ <div id="loginError" class="error-message"></div>
+ </div>
+ 
+ <div id="dashboard" class="dashboard" style="display: none;">
+ <div class="device-list">
+ <h2>Dispositivos Conectados</h2>
+ 
+ <div class="device-container" id="device1">
+ <div class="device-header">
+ <span class="device-name">Dispositivo 1</span>
+ <span class="device-status" id="status1">Desconectado</span>
+ </div>
+ <div class="device-media">
+ <video id="video1" autoplay playsinline muted></video>
+ <audio id="audio1" autoplay></audio>
+ </div>
+ </div>
+ 
+ <div class="device-container" id="device2">
+ <div class="device-header">
+ <span class="device-name">Dispositivo 2</span>
+ <span class="device-status" id="status2">Desconectado</span>
+ </div>
+ <div class="device-media">
+ <video id="video2" autoplay playsinline muted></video>
+ <audio id="audio2" autoplay></audio>
+ </div>
+ </div>
+ 
+ <div class="device-container" id="device3">
+ <div class="device-header">
+ <span class="device-name">Dispositivo 3</span>
+ <span class="device-status" id="status3">Desconectado</span>
+ </div>
+ <div class="device-media">
+ <video id="video3" autoplay playsinline muted></video>
+ <audio id="audio3" autoplay></audio>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="connection-info">
+ <h3>Información de Conexión</h3>
+ <div class="info-item">
+ <span>Fecha:</span>
+ <span id="connectionDate"></span>
+ </div>
+ <div class="info-item">
+ <span>Hora:</span>
+ <span id="connectionTime"></span>
+ </div>
+ <div class="info-item">
+ <span>IP del dispositivo:</span>
+ <span id="deviceIP"></span>
+ </div>
+ <div class="info-item">
+ <span>Navegador:</span>
+ <span id="deviceBrowser"></span>
+ </div>
+ <div class="info-item">
+ <span>Estado de conexión:</span>
+ <span id="connectionStatus">Desconectado</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <script src="observer.js"></script>
+</body>
+</html>
